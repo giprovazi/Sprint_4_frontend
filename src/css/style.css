@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');
+
+.font-trispace {
+  font-family: 'Trispace', sans-serif;
+}
+
+.font-titan {
+  font-family: 'Titan One', cursive;
+}
+
+.font-ultra {
+  font-family: 'Ultra', serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
