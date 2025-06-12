@@ -24,18 +24,78 @@
 
             <div class="relative w-[600px] my-12 left-[22rem]">
                 <img src="./src/assets/balao.png" alt="Balão de fala">
-                    <p class=" absolute top-8 left-[6rem] bottom-2 text-3xl text-gray-800 lg:leading-relaxed font-patrick lg:text-4xl">
-                        Oi! Ainda não me apresentei,né? <br> Eu sou o Leo, o leãozinho do NutriSabará!
+                    <p id="fala" class=" absolute top-8 left-[6rem] bottom-2 text-3xl text-gray-800 lg:leading-relaxed font-patrick lg:text-4xl transition-opacity duration-500 opacity-100">
+                        
                     </p>
 
-                <button class="absolute bottom-[1rem] right-3 bg-[#FF0000] hover:bg-red-700 text-white px-4 py-4 rounded-full flex items-center justify-center space-x-2 shadow-lg transition duration-300 ease-in-out">
+                <button id="proximo" class="absolute bottom-[1rem] right-3 bg-[#FF0000] hover:bg-red-700 text-white px-4 py-4 rounded-full flex items-center justify-center space-x-2 shadow-lg transition duration-300 ease-in-out" type="button">
                     <span class="font-titan text-3xl ">PRÓXIMO</span>
                     <img src="./src/assets/seta.png" alt="Ícone de seta" class="w-[1.7rem] mt-1"> 
                 </button>
             </div>
         </div>
+        <div class="hidden pl-10 animate-fadeIn" id="darNota" >
+            <div class=" bg-[#FF0000] relative w-[20rem] h-[16rem] sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[420px] lg:w-[600px] lg:h-[320px] 
+                rounded-2xl shadow-[12px_12px_8.9px_rgba(0,0,0,0.25)] mb-10 
+                flex flex-col  items-center mx-auto translate-x-10">
+                <h1 class="font-ultra text-white mt-4 mb-2 lg:text-3xl md:text-2xl sm:text-xl text-lg">Avaliar refeições</h1>
+                <h2 class="font-trispace text-white lg:text-xl md:text-xl sm:text-lg text-md">Avalie de 1 a 5 estrelas
+                     <img src="./src/assets/estrela_preenchida.png" alt="Ícone de estrela" class="inline w-[1.3rem] mb-1">
+                </h2>
+                <div class="grupo-avaliacao flex w-full pl-4">
+                    <p class="text-white font-titan mt-6 text-lg sm:text-xl md:text-2xl text-left">
+                        Arroz
+                    </p>
+                    <div class="avaliacao flex space-x-4 mt-6 ml-4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 1" class="w-8 cursor-pointer" data-index="1">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 2" class="w-8 cursor-pointer" data-index="2">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 3" class="w-8 cursor-pointer" data-index="3">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 4" class="w-8 cursor-pointer" data-index="4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 5" class="w-8 cursor-pointer" data-index="5">
+                    </div>
+                </div>
+                <div class="grupo-avaliacao flex w-full pl-4 mt-2">
+                    <p class="text-white font-titan mt-6 text-lg sm:text-xl md:text-2xl text-left">
+                        Feijão
+                    </p>
+                    <div class="avaliacao flex space-x-4 mt-6 ml-4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 1" class="w-8 cursor-pointer" data-index="1">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 2" class="w-8 cursor-pointer" data-index="2">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 3" class="w-8 cursor-pointer" data-index="3">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 4" class="w-8 cursor-pointer" data-index="4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 5" class="w-8 cursor-pointer" data-index="5">
+                    </div>
+                </div>
+                <div class="grupo-avaliacao flex w-full pl-4 mt-4">
+                    <p class="text-white font-titan mt-6 text-lg sm:text-xl md:text-2xl text-left">
+                        Carne
+                    </p>
+                    <div class="avaliacao flex space-x-4 mt-6 ml-4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 1" class="w-8 cursor-pointer" data-index="1">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 2" class="w-8 cursor-pointer" data-index="2">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 3" class="w-8 cursor-pointer" data-index="3">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 4" class="w-8 cursor-pointer" data-index="4">
+                        <img src="./src/assets/estrela_vazia.png" alt="Estrela 5" class="w-8 cursor-pointer" data-index="5">
+                    </div>
+                </div>
+                <div class="absolute  bottom-1 right-3 bg-[#2168C6] rounded-xl">
+
+                    <button id="avaliar" class="font-titan text-3xl text-white p-6 hover:bg-blue-800 hover:rounded-xl">
+                        AVALIAR
+                    </button>
+
+                </div>
+                
+
+
+            </div>
+        </div>
 
     </section>
     
+
+
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>
