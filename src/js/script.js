@@ -26,10 +26,10 @@ proximo.addEventListener("click", ()=>{
   const fala = document.getElementById("fala")
   if (indice < falas.length - 1) {
     indice++;
-    fala.classList.add("opacity-0");
+    fala.classList.add("opacity-0")
     setTimeout(() => {
       fala.innerHTML = falas[indice];
-      fala.classList.remove("opacity-0");
+      fala.classList.remove("opacity-0")
     }, 500);
       }
   
@@ -38,16 +38,16 @@ proximo.addEventListener("click", ()=>{
     proximo.disabled = true
     proximo.classList.add("opacity-0", "cursor-not-allowed")
     setTimeout(() => {
-      darNota.scrollIntoView({ behavior: 'smooth' });
+      darNota.scrollIntoView({ behavior: 'smooth' })
     }, 3000)
 
   }  
 })
 
-const grupos = document.querySelectorAll('.avaliacao');
+const grupos = document.querySelectorAll('.avaliacao')
 
 grupos.forEach(grupo => {
-  const estrelas = grupo.querySelectorAll('img');
+  const estrelas = grupo.querySelectorAll('img')
   let nota = 0;
 
   estrelas.forEach((estrela, index) => {
@@ -57,19 +57,26 @@ grupos.forEach(grupo => {
       estrelas.forEach((e, i) => {
         e.src = i < nota 
           ? './src/assets/estrela_preenchida.png' 
-          : './src/assets/estrela_vazia.png';
+          : './src/assets/estrela_vazia.png'
       })
     })
   })
 })
 
-const avaliar = document.getElementById("avaliar")
+const avaliar = document.getElementById("avaliar");
 
-avaliar.addEventListener("click", ()=>{
+avaliar.addEventListener("click", () => {
+  const fala = document.getElementById("fala")
+
+  fala.classList.add("opacity-0")
   setTimeout(() => {
-    alert("Refeição avaliada com sucesso!")
-  }, 400)
+    fala.textContent = "Obrigado! Sua ajuda vai deixar as próximas refeições ainda mais gostosas!"
+    fala.classList.remove("opacity-0")
+  }, 500)
+
+  darNota.classList.add("hidden")
+
   setTimeout(() => {
-    window.location.href = "index.html";
-  }, 1000); 
-})
+    window.location.href = "index.html"
+  }, 5000);
+});
